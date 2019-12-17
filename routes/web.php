@@ -10,11 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+///////////////////////////APP///////////////////////////
+Route::get('/', 'AppController@index' );
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Auth::routes();
+// Route::get('/admin', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/admin', function () {
+//     return view('welcome');
+// });
+
+Auth::routes(['verify' => true]);
+
+Route::get('/admin', 'AdminController@index')->name('admin_home')->middleware('verified');
+
