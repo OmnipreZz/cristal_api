@@ -24,3 +24,5 @@ Auth::routes(['verify' => true]);
 
 Route::get('/admin', 'AdminController@index')->name('admin_home')->middleware('verified');
 
+Route::resource('events', 'EventController');
+
