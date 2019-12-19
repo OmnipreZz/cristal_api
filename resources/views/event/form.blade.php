@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                           <label for="description">{{ __('Description') }}</label>
-                          <textarea id="description" name="description" rows="6" class="form-control @error('description') is-invalid @enderror">@if($event ?? '') {{ $event->description }} @endif</textarea>
+                          <textarea id="description" name="description" rows="6" class="form-control">@if($event ?? '') {{ $event->description }} @endif</textarea>
                           @error('description')
                           <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -42,11 +42,11 @@
                           @enderror
                         </div>
                         <div class="form-group">
-                          <label for="start_datetime">{{ __('Date & Heure') }}</label>
-                          <input id="start_datetime" name="start_datetime" type="text" class="form-control" value="@if($event ?? '') {{ $event->start_datetime }} @endif">
+                          <label for="event_date">{{ __('Date') }}</label>
+                          <input id="event_date" name="event_date" type="text" class="date form-control @error('event_date') is-invalid @enderror" value="@if($event ?? '') {{ $event->event_date }} @endif" readonly>
                         </div>
                         <div class="form-group">
-                          @if ($post ?? '')
+                          @if ($event ?? '')
                           @method('PUT')
                           <button claas="btn btn-warning" formaction="{{ route('events.update', $event) }}" type="submit">{{ __('Update') }}</button>
                           @else
@@ -61,4 +61,9 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $('.date').datepicker({  
+      format: 'yyyy-mm-dd'
+    });  
+</script> 
 @endsection

@@ -9,6 +9,6 @@ $factory->define(Event::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
         'description' => $faker->paragraphs(5,true),
-        'start_datetime' => $faker->dateTime($max = 'now', $timezone = null)
+        'event_date' => $faker->date($format = 'Y-m-d'),
     ];
 });

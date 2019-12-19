@@ -45,7 +45,7 @@ class EventController extends Controller
     {
         Validator::make($request->all(), [
             'title' => 'required|max:255',
-            'description' => 'required',
+            'event_date' => 'required',
         ])->validate();
 
         $model = Event::create($request->all());
@@ -91,10 +91,11 @@ class EventController extends Controller
     {
         Validator::make($request->all(), [
             'title' => 'required|max:255',
-            'description' => 'required',
+            'event_date' => 'required',
         ])->validate();
 
-        $model = Event::where('id', $event->id)->update($request);
+        $update = ['title' => $request->title, 'description' => $request->description, 'event_date' => $request->event_date];
+        $model = Event::where('id', $event->id)->update($update);
         if($model) {
             return redirect('events');
         } else {
