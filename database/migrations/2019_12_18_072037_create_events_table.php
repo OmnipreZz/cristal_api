@@ -18,8 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->text('cover')->nullable();
-            $table->string('start_date');
-            $table->string('start_time');
+            $table->datetime('start_datetime');
             $table->timestamps();
         });
     }

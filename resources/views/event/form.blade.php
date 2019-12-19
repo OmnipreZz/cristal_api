@@ -42,12 +42,8 @@
                           @enderror
                         </div>
                         <div class="form-group">
-                          <label for="start_date">{{ __('Date') }}</label>
-                          <input id="start_date" name="start_date" type="text" class="date form-control" value="@if($event ?? '') {{ $event->start_date }} @endif">
-                        </div>
-                        <div class="form-group">
-                          <label for="start_time">{{ __('Heure') }}</label>
-                          <input id="start_time" name="start_time" type="text" class="timepicker form-control" value="@if($event ?? '') {{ $event->start_time }} @endif">
+                          <label for="start_datetime">{{ __('Date & Heure') }}</label>
+                          <input id="start_datetime" name="start_datetime" type="text" class="form-control" value="@if($event ?? '') {{ $event->start_datetime }} @endif">
                         </div>
                         <div class="form-group">
                           @if ($post ?? '')
@@ -65,19 +61,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-
-    $('.date').datepicker({  
-
-      format: 'mm-dd-yyyy'
-
-    });  
-
-    $('.timepicker').datetimepicker({
-
-      format: 'HH:mm:ss'
-
-    }); 
-
-</script>  
 @endsection
