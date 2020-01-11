@@ -46,9 +46,13 @@ class EventController extends Controller
         Validator::make($request->all(), [
             'title' => 'required|max:255',
             'event_date' => 'required',
+            'cover' => 'required|image'
         ])->validate();
 
         $model = Event::create($request->all());
+
+        $this->storeImage($model);
+
         if($model) {
             return redirect('events');
         } else {
@@ -113,5 +117,16 @@ class EventController extends Controller
     {
         Event::destroy($event->id);
         return redirect('events');
+    }
+
+
+
+    private function storeImage($model)
+    {
+        if (request()->has('cover')) {
+            $model->update([
+                'cover' => request()->cover->store('uploads', 'public'),
+            ]);
+        }
     }
 }

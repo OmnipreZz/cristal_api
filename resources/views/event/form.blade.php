@@ -19,12 +19,12 @@
                     <strong>{{ $error }}</strong>
                   </div>
                   @endif
-                  <form method="POST">
+                  <form method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                       <div class="col-md-8">
                         <div class="form-group">
-                          <label for="title">{{ __('Title') }}</label>
+                          <label for="title">{{ __('Titre') }}</label>
                           <input id="title" name="title" type="text" class="form-control @error('title') is-invalid @enderror" value="@if($event ?? '') {{ $event->title }} @endif">
                           @error('title')
                           <span class="invalid-feedback" role="alert">
@@ -32,6 +32,22 @@
                           </span>
                           @enderror
                         </div>
+
+                        @if($event ?? '')
+                          <div class="row">
+                            <div class="col-12">
+                              <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-thumbnail">
+                            </div>
+                          </div>
+                        @endif
+                        <div class="form-group d-flex flex-column">
+                          <label for="cover">{{ __('Image') }}</label>
+                          <input type="file" id="cover" name="cover">
+                          <span role="alert">
+                            <strong class="errMess text-danger">{{ $errors->first('cover') }}</strong>
+                          </span>
+                        </div>
+
                         <div class="form-group">
                           <label for="description">{{ __('Description') }}</label>
                           <textarea id="description" name="description" rows="6" class="form-control">@if($event ?? '') {{ $event->description }} @endif</textarea>

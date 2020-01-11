@@ -15,6 +15,11 @@
                 </div>
                 <div class="card-body">
                   <h1>{{ $event->title }}</h1>
+                  <div class="row">
+                    <div class="col-12">
+                      <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-thumbnail">
+                    </div>
+                  </div>
                   <p>{{ $event->description }}</p>
                 </div>
             </div>
