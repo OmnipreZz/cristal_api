@@ -41,6 +41,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route('events.index') }}">{{ __('Events') }}</a>
+                        <a class="nav-link" href="{{ route('menus.index') }}">{{ __('Menus') }}</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

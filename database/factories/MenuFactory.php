@@ -7,9 +7,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Menu::class, function (Faker $faker) {
     return [
-        'title' => $faker->sentence,
+        'name' => $faker->sentence,
         'description' => $faker->paragraphs(1,true),
         'price' => $faker->randomNumber($nbDigits = 2, $strict = false),
-        'category_id' => 1,
+        'category_id' => $faker->randomDigitNot(0),
     ];
 });

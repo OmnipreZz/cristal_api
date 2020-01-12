@@ -25,4 +25,6 @@ Auth::routes(['verify' => true]);
 Route::get('/admin', 'AdminController@index')->name('admin_home')->middleware('verified');
 
 Route::resource('events', 'EventController');
+Route::resource('menus', 'MenuController');
 
+Route::Post('/admin/menus/bycategory','MenuController@indexByCat')->name('menu_indexcategory')->middleware('auth');

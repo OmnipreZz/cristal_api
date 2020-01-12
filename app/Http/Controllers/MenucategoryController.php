@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Menu;
 use App\Menucategory;
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class MenucategoryController extends Controller
 {
     public function __construct()
     {
@@ -20,18 +19,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::with('category')->where('category_id', 1)->orderBy('name')->get();
-        $categories = Menucategory::orderBy('name')->get();
-        $hisCategory = 1;
-        return view('menu.admin', compact('menus', 'categories', 'hisCategory'));
-    }
-
-    public function indexByCat(Request $request)
-    {
-        $categories = Menucategory::orderBy('name')->get();
-        $menus = Menu::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
-        $hisCategory = $request->input('category');
-        return view('menu.admin', compact('menus', 'categories', 'hisCategory'));
+        // $categories = Menucategory::orderBy('name', 'asc')->get();
+        // return view('commandCat.admin', compact('categories'));
     }
 
     /**
@@ -58,10 +47,10 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Menu  $menu
+     * @param  \App\Menucategory  $menucategory
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show(Menucategory $menucategory)
     {
         //
     }
@@ -69,10 +58,10 @@ class MenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Menu  $menu
+     * @param  \App\Menucategory  $menucategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit(Menucategory $menucategory)
     {
         //
     }
@@ -81,10 +70,10 @@ class MenuController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Menu  $menu
+     * @param  \App\Menucategory  $menucategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, Menucategory $menucategory)
     {
         //
     }
@@ -92,10 +81,10 @@ class MenuController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Menu  $menu
+     * @param  \App\Menucategory  $menucategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy(Menucategory $menucategory)
     {
         //
     }

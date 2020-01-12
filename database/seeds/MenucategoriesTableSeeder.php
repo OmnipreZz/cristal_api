@@ -11,6 +11,6 @@ class MenucategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Menucategory::class, 5)->create();
+        factory(App\Menucategory::class, 9)->create();
     }
 }
