@@ -7,10 +7,14 @@
             <div class="card">
                 <div class="card-header">
                   <div class="float-left">
-                    <h2 class="mb-1">{{ __('New Event') }}</h2>
+                    @if($event ?? '')
+                    <h2 class="mb-1">{{ __('Modifier l\'événement') }}</h2>
+                    @else
+                    <h2 class="mb-1">{{ __('Nouvel événement') }}</h2>
+                    @endif
                   </div>
                   <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('events.index') }}"><i class="fas fa-angle-double-left mr-2"></i>{{ __('Retour') }}</a>
+                    <a class="btn btn-primary" title="Retour aux événements" href="{{ route('events.index') }}"><i class="fas fa-angle-double-left mr-2"></i>{{ __('Retour') }}</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -64,9 +68,9 @@
                         <div class="form-group">
                           @if ($event ?? '')
                           @method('PUT')
-                          <button class="btn btn-warning" formaction="{{ route('events.update', $event) }}" type="submit">{{ __('Modifier') }}</button>
+                          <button class="btn btn-warning" title="Modifier l'événement" formaction="{{ route('events.update', $event) }}" type="submit">{{ __('Modifier') }}</button>
                           @else
-                          <button class="btn btn-warning" formaction="{{ route('events.store') }}" type="submit">{{ __('Envoyer') }}</button>
+                          <button class="btn btn-warning" title="Créer l'événement" formaction="{{ route('events.store') }}" type="submit">{{ __('Envoyer') }}</button>
                           @endif
                         </div>
                       </div>

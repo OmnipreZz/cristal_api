@@ -14,25 +14,30 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="container-fluid pt-4">
-                    <form method="POST" action="{{ route('menu_indexcategory') }}" aria-label="">
-                      @csrf
-                        <div class="form-group row">
-                            <label for="category" class="col-form-label text-md-right col-md-3">Choisissez une catégorie :</label>
-                            <select name="category" class="form-control col-md-3" id="category">
-                                @foreach($categories as $id => $category)
-                                <option value="{{$category->id}}"
-                                @if ($hisCategory == $category->id)
-                                {{'selected'}}
-                                @endif
-                                >{{$category->name}}</option>
-                                @endforeach
-                            </select>
-                            <button type="submit" title="Valider" class="btn btn-primary ml-2">
-                            <i class="fas fa-check"></i>
-                            </button>
-                        </div>
-                    </form>
+                  <div class="row">
+                    <div class="col-10">
+                      <form method="POST" action="{{ route('menu_indexcategory') }}" aria-label="">
+                        @csrf
+                          <div class="form-group row">
+                              <label for="category" class="col-form-label text-md-right col-md-3">Choisissez une catégorie :</label>
+                              <select name="category" class="form-control col-md-3" id="category">
+                                  @foreach($categories as $id => $category)
+                                  <option value="{{$category->id}}"
+                                  @if ($hisCategory == $category->id)
+                                  {{'selected'}}
+                                  @endif
+                                  >{{$category->name}}</option>
+                                  @endforeach
+                              </select>
+                              <button type="submit" title="Valider" class="btn btn-success ml-2">
+                              <i class="fas fa-check"></i>
+                              </button>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="col-2 text-right">
+                    <a class="btn btn-primary" title="Voir les catégories" href="{{ route('menucategories.index') }}">{{ __('Catégories') }}</a>
+                    </div>
                   </div>
                   <table class="table table-bordered table-striped">
                     <thead>

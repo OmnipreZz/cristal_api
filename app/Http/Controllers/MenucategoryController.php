@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Menucategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class MenucategoryController extends Controller
 {
@@ -19,8 +21,8 @@ class MenucategoryController extends Controller
      */
     public function index()
     {
-        // $categories = Menucategory::orderBy('name', 'asc')->get();
-        // return view('commandCat.admin', compact('categories'));
+        $models = Menucategory::orderBy('name', 'asc')->get();
+        return view('menucategory.index', ['menucategories'=>$models]);
     }
 
     /**
@@ -30,7 +32,7 @@ class MenucategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('menucategory.form');
     }
 
     /**
@@ -41,7 +43,17 @@ class MenucategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => 'required|max:255',
+        ])->validate();
+
+        $model = Menucategory::create($request->all());
+
+        if($model) {
+            return redirect('menucategories');
+        } else {
+            return redirect('menucategories/create')->with('error', 'Error! Request data is not insert to database, please try again');
+        }
     }
 
     /**
@@ -63,7 +75,8 @@ class MenucategoryController extends Controller
      */
     public function edit(Menucategory $menucategory)
     {
-        //
+        $model = Menucategory::find($menucategory->id);
+        return view('menucategory.form', ['menucategory'=>$model]);
     }
 
     /**
@@ -75,7 +88,17 @@ class MenucategoryController extends Controller
      */
     public function update(Request $request, Menucategory $menucategory)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => 'required|max:255',
+        ])->validate();
+
+        $update = ['name' => $request->name];
+        $model = Menucategory::where('id', $menucategory->id)->update($update);
+        if($model) {
+            return redirect('menucategories');
+        } else {
+            return redirect('menucategories/'.$menucategory->id.'/edit')->with('error', 'Error! Failed to update request data');
+        }
     }
 
     /**
@@ -86,6 +109,7 @@ class MenucategoryController extends Controller
      */
     public function destroy(Menucategory $menucategory)
     {
-        //
+        Menucategory::destroy($menucategory->id);
+        return redirect('menucategories');
     }
 }
