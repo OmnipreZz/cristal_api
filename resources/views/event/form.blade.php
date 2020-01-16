@@ -10,7 +10,7 @@
                     <h2 class="mb-1">{{ __('New Event') }}</h2>
                   </div>
                   <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('events.index') }}">{{ __('Back') }}</a>
+                    <a class="btn btn-primary" href="{{ route('events.index') }}"><i class="fas fa-angle-double-left mr-2"></i>{{ __('Retour') }}</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -64,9 +64,9 @@
                         <div class="form-group">
                           @if ($event ?? '')
                           @method('PUT')
-                          <button claas="btn btn-warning" formaction="{{ route('events.update', $event) }}" type="submit">{{ __('Update') }}</button>
+                          <button class="btn btn-warning" formaction="{{ route('events.update', $event) }}" type="submit">{{ __('Modifier') }}</button>
                           @else
-                          <button claas="btn btn-warning" formaction="{{ route('events.store') }}" type="submit">{{ __('Submit') }}</button>
+                          <button class="btn btn-warning" formaction="{{ route('events.store') }}" type="submit">{{ __('Envoyer') }}</button>
                           @endif
                         </div>
                       </div>

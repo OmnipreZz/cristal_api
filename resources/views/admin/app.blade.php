@@ -7,9 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Rock'n'Burger | Biarritz</title>
-
-    <meta name="description" content="Le restaurant Rock'n'Burger vous accueille à Biarritz - Burger, Fish and Chips, Poulet Frites - Sur place ou à emporter"> 
+    <title>Rock'n'Burger | Admin Session</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

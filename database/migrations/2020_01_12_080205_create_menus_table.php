@@ -17,7 +17,7 @@ class CreateMenusTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->integer('price');
+            $table->text('price');
             $table->integer('category_id');
             $table->timestamps();
         });

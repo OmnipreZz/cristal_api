@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Menu;
 use App\Menucategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class MenuController extends Controller
 {
@@ -41,7 +43,8 @@ class MenuController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Menucategory::orderBy('name')->get();
+        return view('menu.form', compact('categories'));
     }
 
     /**
@@ -52,7 +55,19 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'price' => 'required|regex:/(\d+(?:[.]\d+)?)/',
+            'category_id' => 'required'
+        ])->validate();
+
+        $model = Menu::create($request->all());
+
+        if($model) {
+            return redirect('menus');
+        } else {
+            return redirect('menus/create')->with('error', 'Error! Request data is not insert to database, please try again');
+        }
     }
 
     /**
@@ -74,7 +89,10 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
-        //
+        $dish = Menu::find($menu->id);
+        $categories = Menucategory::orderBy('name')->get();
+        $hisCategory = $menu->category;
+        return view('menu.form', compact('dish', 'categories', 'hisCategory'));
     }
 
     /**
@@ -86,7 +104,19 @@ class MenuController extends Controller
      */
     public function update(Request $request, Menu $menu)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'price' => 'required|regex:/(\d+(?:[.]\d+)?)/',
+            'category_id' => 'required'
+        ])->validate();
+
+        $update = ['name' => $request->name, 'description' => $request->description, 'price' => $request->price, 'category_id' => $request->category_id];
+        $model = Menu::where('id', $menu->id)->update($update);
+        if($model) {
+            return redirect('menus');
+        } else {
+            return redirect('menus/'.$event->id.'/edit')->with('error', 'Error! Failed to update request data');
+        }
     }
 
     /**
@@ -97,6 +127,7 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu)
     {
-        //
+        Menu::destroy($menu->id);
+        return redirect('menus');
     }
 }

@@ -10,7 +10,7 @@
                     <h2 class="mb-1">{{ __('Menus') }}</h2>
                   </div>
                   <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('menus.create') }}">{{ __('Add New') }}</a>
+                  <a class="btn btn-primary" title="Ajouter un nouveau produit" href="{{ route('menus.create') }}"><i class="fas fa-plus mr-2"></i>{{ __('Ajouter') }}</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -29,7 +29,7 @@
                                 @endforeach
                             </select>
                             <button type="submit" title="Valider" class="btn btn-primary ml-2">
-                            {{ __('Ok') }}
+                            <i class="fas fa-check"></i>
                             </button>
                         </div>
                     </form>
@@ -53,14 +53,32 @@
                         <th class="text-secondary">{{$menu->name}}</th>
                         <td class="text-secondary">{{$menu->description}}</td>
                         <td class="text-secondary">{{$menu->price}}</td>
-                        <td>
-                          <a class="btn btn-info btn-sm" href="{{ route('menus.show', $menu) }}">{{ __('View') }}</a>
-                          <a class="btn btn-warning btn-sm ml-2" href="{{ route('menus.edit', $menu) }}">{{ __('Edit') }}</a>
-                          <form action="{{ route('menus.destroy', $menu) }}" method="POST" class="d-inline">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger btn-sm ml-3" type="submit"><i class="fas fa-times"></i></button>
-                          </form>
+                        <td class="text-right">
+                          <a class="btn btn-warning btn-sm" title="Editer le produit" href="{{ route('menus.edit', $menu) }}">{{ __('Editer') }}</a>
+
+                          <button class="btn btn-danger btn-sm ml-2" title="Supprimer le produit" data-toggle="modal" data-target="#confirm{{$menu->id}}">
+                            <i class="fas fa-times"></i>
+                          </button>
+                          <div class="modal fade" id="confirm{{$menu->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="text-danger">Supprimer</h2>
+                              </div>
+                              <div class="modal-body">
+                                  <p>Voulez vous supprimer définitivement le produit "{{$menu->name}}" ?</p>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                  <form action="{{ route('menus.destroy', $menu) }}" method="POST" class="d-inline">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button class="btn btn-danger" type="submit">{{ __('Supprimer') }}</button>
+                                </form>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
                         </td>
                       </tr>
                       @endforeach
