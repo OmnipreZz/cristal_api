@@ -41,6 +41,7 @@
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route('events.index') }}">{{ __('Evénements') }}</a>
                         <a class="nav-link" href="{{ route('menus.index') }}">{{ __('Menus') }}</a>
+                        <a class="nav-link" href="{{ route('photos.index') }}">{{ __('Photos') }}</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

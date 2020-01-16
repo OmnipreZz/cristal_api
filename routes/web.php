@@ -27,5 +27,6 @@ Route::get('/admin', 'AdminController@index')->name('admin_home')->middleware('v
 Route::resource('events', 'EventController');
 Route::resource('menus', 'MenuController');
 Route::resource('menucategories', 'MenucategoryController');
+Route::resource('photos', 'PhotoController');
 
 Route::Post('/admin/menus/bycategory','MenuController@indexByCat')->name('menu_indexcategory')->middleware('auth');

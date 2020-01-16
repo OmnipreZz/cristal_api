@@ -7,10 +7,10 @@
             <div class="card">
                 <div class="card-header">
                   <div class="float-left">
-                    <h2 class="mb-1">{{ __('Preview Event') }}</h2>
+                    <h2 class="mb-1">{{ __('Evénement') }}</h2>
                   </div>
                   <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('events.index') }}">{{ __('Back') }}</a>
+                    <a class="btn btn-primary" title="Retour aux événements" href="{{ route('events.index') }}"><i class="fas fa-angle-double-left mr-2"></i>{{ __('Retour') }}</a>
                   </div>
                 </div>
                 <div class="card-body">
