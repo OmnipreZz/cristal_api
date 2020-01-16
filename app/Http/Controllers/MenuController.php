@@ -23,7 +23,7 @@ class MenuController extends Controller
         $menus = Menu::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Menucategory::orderBy('name')->get();
         $hisCategory = 1;
-        return view('menu.admin', compact('menus', 'categories', 'hisCategory'));
+        return view('menu.index', compact('menus', 'categories', 'hisCategory'));
     }
 
     public function indexByCat(Request $request)
@@ -31,7 +31,7 @@ class MenuController extends Controller
         $categories = Menucategory::orderBy('name')->get();
         $menus = Menu::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         $hisCategory = $request->input('category');
-        return view('menu.admin', compact('menus', 'categories', 'hisCategory'));
+        return view('menu.index', compact('menus', 'categories', 'hisCategory'));
     }
 
     /**

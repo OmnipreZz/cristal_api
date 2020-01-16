@@ -7,10 +7,10 @@
             <div class="card">
                 <div class="card-header">
                   <div class="float-left">
-                    <h2 class="mb-1">{{ __('Events') }}</h2>
+                    <h2 class="mb-1">{{ __('Evénements') }}</h2>
                   </div>
                   <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('events.create') }}">{{ __('Add New') }}</a>
+                    <a class="btn btn-primary" title="Ajouter un nouvel événement" href="{{ route('events.create') }}">{{ __('Ajouter') }}</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -18,7 +18,7 @@
                     <thead>
                       <tr>
                         <th>{{ __('No') }}</th>
-                        <th>{{ __('Title') }}</th>
+                        <th>{{ __('Titre') }}</th>
                         <th width="180">{{ __('Action') }}</th>
                       </tr>
                     </thead>
@@ -30,12 +30,12 @@
                         <td>{{ $no++ }}</td>
                         <td>{{ $event->title }}</td>
                         <td>
-                          <a class="btn btn-info btn-sm" href="{{ route('events.show', $event) }}">{{ __('View') }}</a>
-                          <a class="btn btn-warning btn-sm" href="{{ route('events.edit', $event) }}">{{ __('Edit') }}</a>
+                          <a class="btn btn-info btn-sm" href="{{ route('events.show', $event) }}">{{ __('Voir') }}</a>
+                          <a class="btn btn-warning btn-sm ml-2" href="{{ route('events.edit', $event) }}">{{ __('Editer') }}</a>
                           <form action="{{ route('events.destroy', $event) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                            <button class="btn btn-danger btn-sm ml-3" type="submit"><i class="fas fa-times"></i></button>
                           </form>
                         </td>
                       </tr>

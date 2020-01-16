@@ -6,9 +6,11 @@
     <meta name = "Description" content = "OmniScience : Commands & Shortcuts" >
 
     <!-- CSRF Token -->
-    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Rock'n'Burger | Biarritz</title>
+
+    <meta name="description" content="Le restaurant Rock'n'Burger vous accueille à Biarritz - Burger, Fish and Chips, Poulet Frites - Sur place ou à emporter"> 
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -16,6 +18,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/388a6f036a.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
