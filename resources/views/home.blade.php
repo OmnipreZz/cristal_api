@@ -28,28 +28,48 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    cristal client
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+        <div class="header bg-white">
+            <div class="container-fluid py-3 test">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3 d-flex align-items-center"">
+                        <span class="Iamarock">12 rue du Port Vieux <br> 64200 Biarritz</span>
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                    </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-6 d-flex align-items-center justify-content-center">
+                        <a class="Rockit redCustom" href="{{ url('/') }}">
+                            Rock'n'Burger
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 d-flex align-items-center justify-content-end">
+                        <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="p-2 bd-highlight linkCustom" title="Instagram" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="navbar-header">        
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav Iamarock">
+                            <a class="nav-link-custom mx-3" href="">{{ __('Menu') }}</a>
+                            <a class="nav-link-custom mx-3" href="">{{ __('Evénements') }}</a>
+                            <a class="nav-link-custom mx-3" href="">{{ __('Photos') }}</a>
+                            <a class="nav-link-custom mx-3" href="">{{ __('Contact') }}</a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
+
+
+        <div class="container-fluid accueil">
+
+        </div>
 
         <!-- <main class="py-4">
             @yield('content')
