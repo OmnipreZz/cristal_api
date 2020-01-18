@@ -89,12 +89,15 @@
 
 .nav-link-custom {
   color: black;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .nav-link-custom:hover {
   color: #e30714;
   text-decoration: none;
 }
+
 
 .accueil {
   width: 100%;
@@ -113,4 +116,21 @@
 
 .navbar {
   height: 5vh;
+}
+
+.active-link {
+  color: #e30714;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.active-link:hover {
+  color: #e30714;
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #e30714;
 }

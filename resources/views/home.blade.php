@@ -37,7 +37,7 @@
 
                     </div>
                     <div class="col-sm-4 col-md-6 d-flex align-items-center justify-content-center">
-                        <a class="Rockit redCustom" href="{{ url('/') }}">
+                        <a class="Rockit redCustom" href="{{ route('public_home') }}">
                             Rock'n'Burger
                         </a>
                     </div>
@@ -56,24 +56,24 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav Iamarock">
-                            <a class="nav-link-custom mx-3" href="">{{ __('Menu') }}</a>
-                            <a class="nav-link-custom mx-3" href="">{{ __('Evénements') }}</a>
-                            <a class="nav-link-custom mx-3" href="">{{ __('Photos') }}</a>
-                            <a class="nav-link-custom mx-3" href="">{{ __('Contact') }}</a>
+                            <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
+                            <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
+                            <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
+                            <a class={{ 'gallerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
+                            <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-
-        <div class="container-fluid accueil">
-
-        </div>
-
-        <!-- <main class="py-4">
+        <main>
             @yield('content')
-        </main> -->
+        </main>
+
+        <div class="footer">
+        
+        </div>
     </div>
 </body>
 </html>
