@@ -91,8 +91,27 @@
             @yield('content')
         </main>
 
-        <div class="footer">
-        
+        <div class="footer container-fluid text-white">
+            <div class="container footer-info">
+                <div class="row text-center">
+                    <div class="col-4 footer-left">
+                        
+                    </div>
+                    <div class="col-4">
+                        
+                    </div>
+                    <div class="col-4 footer-right">
+                        <p class="mt-5">Suivez-nous sur les réseaux sociaux</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a class="p-2 bd-highlight socialCustom d-flex align-items-center justify-content-center mx-2" title="Facebook" href=""><i class="fab fa-facebook-f fa-2x"></i></a>
+                            <a class="p-2 bd-highlight socialCustom  d-flex align-items-center justify-content-center mx-2" title="Instagram" href=""><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center droit">
+                <span>© 2020 - Le Rock'n'Burger - Tous droits réservés</span>
+            </div>
         </div>
     </div>
 </body>
