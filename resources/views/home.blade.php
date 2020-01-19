@@ -29,7 +29,7 @@
 <body>
     <div id="app">
 
-        <div class="navDisplay header bg-white">
+        <div class="mobileDisplay header bg-white">
             <div class="container-fluid py-3 test">
                 <div class="row">
                     <div class="col-sm-5 col-md-4 d-flex align-items-center"">
@@ -41,33 +41,28 @@
                         </a>
                     </div>
                     <div class="col-sm-5 col-md-4 d-flex align-items-center justify-content-end">
-                    <span class="Iamarock pr-3"><i class="fas fa-phone redCustom pr-1"></i> +33 6 64 64 64 64</span>
+                        <span class="Iamarock pr-3"><i class="fas fa-phone redCustom pr-1"></i> +33 6 64 64 64 64</span>
                         <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="p-2 bd-highlight linkCustom" title="Instagram" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="navDisplay navSize navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="mobileDisplay navSize navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container-fluid d-flex justify-content-center">
                 <div class="navbar-header">        
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav Iamarock">
-                            <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
-                            <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
-                            <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
-                            <a class={{ 'gallerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
-                            <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
-                        </ul>
-                    </div>
+                    <ul class="navbar-nav Iamarock">
+                        <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
+                        <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
+                        <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
+                        <a class={{ 'gallerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
+                        <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
+                    </ul>
                 </div>
             </div>
         </nav>
 
-        <nav class="navMobile navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="mobileActive navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container p-1">
                 <a class="Rockit redCustom" href="{{ route('public_home') }}">
                     Rock'n'Burger
@@ -76,14 +71,18 @@
                     <span><i class="fas fa-bars fa-2x"></i></span>
                 </button>
 
-                <div class="collapse navbar-collapse pt-3" id="navbarSupportedContent">
-                    <ul class="navbar-nav Iamarock">
+                <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav Iamarock mobileLink">
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
                         <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
                         <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
                         <a class={{ 'gallerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
                         <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
+                    <div class="d-flex align-items-center justify-content-end mobileSocial">
+                        <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="p-2 bd-highlight linkCustom" title="Instagram" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>

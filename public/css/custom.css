@@ -7,7 +7,6 @@
 }
 
 
-
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////FONT//////////////////////////////// */
@@ -74,9 +73,17 @@
   font-family: "Sketch", cursive;
 }
 
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////COLOR//////////////////////////////// */
+
 .redCustom {
   color: #e30714;
 }
+
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////LINK//////////////////////////////// */
 
 .linkCustom {
   color: #e30714;
@@ -98,16 +105,21 @@
   text-decoration: none;
 }
 
-
-.accueil {
-  width: 100%;
-  height: 85vh;
-  background-image: url("/images/burger-2041192_1280.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.mobileLink a {
+  margin-bottom: 0.5em;
 }
 
+.mobileLink a:last-child {
+  margin-bottom: 0em;
+}
+
+.mobileSocial {
+  margin-top: -0.5em;
+}
+
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////NAVBAR//////////////////////////////// */
 
 .header {
   border-bottom: 1px solid #e30714;
@@ -129,13 +141,7 @@
   text-decoration: none;
 }
 
-.footer {
-  width: 100%;
-  height: 30vh;
-  background-color: #e30714;
-}
-
-.navMobile {
+.mobileActive {
   display: none;
 }
 
@@ -144,6 +150,28 @@
   border: none;
 }
 
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////HOMEPAGE//////////////////////////////// */
+
+.accueil {
+  width: 100%;
+  height: 85vh;
+  background-image: url("/images/burger-2041192_1280.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////FOOTER//////////////////////////////// */
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #e30714;
+}
 
 /* /////////////////// */
 /* ///////// */
@@ -157,11 +185,12 @@
 }
 
 @media (max-width: 767.98px) {
- .navDisplay {
+
+ .mobileDisplay {
    display: none;
  }
 
- .navMobile {
+ .mobileActive {
    display: block;
  }
 }
