@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Rock'n'Burger | Biarritz</title>
+    <title>Rock'n'Burger | Bar & Restaurant | Biarritz</title>
 
     <meta name="description" content="Le restaurant Rock'n'Burger vous accueille à Biarritz - Burger, Fish and Chips, Poulet Frites - Sur place ou à emporter"> 
 
@@ -55,7 +55,7 @@
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
                         <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
                         <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
-                        <a class={{ 'gallerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
+                        <a class={{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
                         <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
                         <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
                         <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
-                        <a class={{ 'gallerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
+                        <a class={{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
                         <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
                     <div class="d-flex align-items-center justify-content-end mobileSocial">
