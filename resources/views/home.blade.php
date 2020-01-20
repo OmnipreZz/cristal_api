@@ -30,9 +30,9 @@
     <div id="app">
 
         <div class="mobileDisplay header bg-white">
-            <div class="container-fluid py-3 test">
+            <div class="container-fluid pt-4">
                 <div class="row">
-                    <div class="col-sm-5 col-md-4 d-flex align-items-center"">
+                    <div class="col-sm-5 col-md-4 d-flex align-items-center">
                         <span class="Iamarock">12 rue du Port Vieux <br> 64200 Biarritz</span>
                     </div>
                     <div class="col-sm-2 col-md-4 d-flex align-items-center justify-content-center">
@@ -101,7 +101,7 @@
                         
                     </div>
                     <div class="col-4 footer-right">
-                        <p class="mt-5">Suivez-nous sur les réseaux sociaux</p>
+                        <p class="mt-5">Rejoignez-nous sur les réseaux sociaux</p>
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="p-2 bd-highlight socialCustom d-flex align-items-center justify-content-center mx-2" title="Facebook" href=""><i class="fab fa-facebook-f fa-2x"></i></a>
                             <a class="p-2 bd-highlight socialCustom  d-flex align-items-center justify-content-center mx-2" title="Instagram" href=""><i class="fab fa-instagram fa-2x"></i></a>
