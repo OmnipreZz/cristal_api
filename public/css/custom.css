@@ -163,29 +163,34 @@
   background-size: cover;
 }
 
+.test {
+  width: 100%;
+  height: 70vh;
+}
+
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////FOOTER//////////////////////////////// */
 
 .footer {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   background-color: #e30714;
   padding-top: 5vh;
 }
 
 .footer-info {
-  height: 30vh;
+  height: 25vh;
 }
 
 .footer-left {
-  /* border-right: 1px solid white; */
-  height: 25vh;
+  border-right: 1px solid white;
+  height: 20vh;
 }
 
 .footer-right {
-  /* border-left: 1px solid white; */
-  height: 25vh;
+  border-left: 1px solid white;
+  height: 20vh;
 }
 
 .droit {
@@ -204,6 +209,11 @@
   color: white;
   background-color: #e30714;
   text-decoration: none;
+}
+
+.mentions {
+  text-decoration: underline;
+  color: white;
 }
 
 
