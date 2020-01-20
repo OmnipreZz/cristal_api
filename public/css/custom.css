@@ -38,15 +38,6 @@
 }
 
 @font-face {
-  font-family: "Rocks";
-  src: url("/font/Rocks Personal Use.ttf");
-}
-
-.Rocks {
-  font-family: "Rocks", cursive;
-}
-
-@font-face {
   font-family: "Rockwild";
   src: url("/font/Rockwild.ttf");
 }
@@ -62,15 +53,6 @@
 
 .Sherocks {
   font-family: "Sherocks", cursive;
-}
-
-@font-face {
-  font-family: "Sketch";
-  src: url("/font/Sketch_Block.ttf");
-}
-
-.Sketch {
-  font-family: "Sketch", cursive;
 }
 
 /* /////////////////// */
@@ -155,15 +137,35 @@
 /* ////////////////////////////////HOMEPAGE//////////////////////////////// */
 
 .accueil {
+  position: absolute;
+  top: 20vh;
   width: 100%;
-  height: 70vh;
-  background-image: url("/images/burger-2041192_1280.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  max-height: 90vh;
+}
+
+.img-fluid {
+  max-height: 90vh;
+  width: 100%;
+}
+
+.btnMenu {
+  background-color: #e30714;
+  color: white;
+}
+
+.btnMenu:hover {
+  background-color: white;
+  color: #e30714;
+  border: 2px solid #e30714;
 }
 
 .test {
+  width: 100%;
+  height: 30vh;
+  background-color: #e30714;
+}
+
+.test1 {
   width: 100%;
   height: 70vh;
 }
