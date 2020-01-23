@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name = "Description" content = "OmniScience : Commands & Shortcuts" >
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Rock'n'Burger | Bar & Restaurant | Biarritz</title>
+    <title>Rock'n'Burger | Restaurant à Biarritz</title>
 
-    <meta name="description" content="Le restaurant Rock'n'Burger vous accueille à Biarritz - Burger, Fish and Chips, Poulet Frites - Sur place ou à emporter"> 
+    <meta name="description" content="Le restaurant Rock'n'Burger vous accueille à Biarritz - Burgers, Wraps, Fish and Chips, Poulets Frites - Sur place ou à emporter"> 
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -53,10 +52,10 @@
                 <div class="navbar-header">        
                     <ul class="navbar-nav Iamarock">
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
-                        <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
-                        <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
-                        <a class={{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
-                        <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
+                        <a class="{{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
+                        <a class="{{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
+                        <a class="{{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
+                        <a class="{{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
                 </div>
             </div>
@@ -74,10 +73,10 @@
                 <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
                     <ul class="navbar-nav Iamarock mobileLink">
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
-                        <a class={{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
-                        <a class={{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
-                        <a class={{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
-                        <a class={{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}} href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
+                        <a class="{{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
+                        <a class="{{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
+                        <a class="{{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
+                        <a class="{{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
                     <div class="d-flex align-items-center justify-content-end mobileSocial">
                         <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
