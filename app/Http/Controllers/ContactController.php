@@ -19,7 +19,6 @@ class ContactController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'phone' => '',
-            'subject' => '',
             'message' => 'required'
         ]);
 

@@ -29,14 +29,14 @@
     <div id="app">
 
         <div class="mobileDisplay header bg-white">
-            <div class="container-fluid pt-4">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-5 col-md-4 d-flex align-items-center">
                         <span class="Iamarock">12 rue du Port Vieux <br> 64200 Biarritz</span>
                     </div>
                     <div class="col-sm-2 col-md-4 d-flex align-items-center justify-content-center">
-                        <a class="Rockit redCustom" href="{{ route('public_home') }}">
-                            Rock'n'Burger
+                        <a href="{{ route('public_home') }}">
+                            <img class="img-fluid logoHome" alt="logo" src="/images/logo06.png"></img>
                         </a>
                     </div>
                     <div class="col-sm-5 col-md-4 d-flex align-items-center justify-content-end">
@@ -62,10 +62,14 @@
         </nav>
 
         <nav class="mobileActive navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container p-1">
-                <a class="Rockit redCustom" href="{{ route('public_home') }}">
-                    Rock'n'Burger
-                </a>
+            <div class="container-fluid">      
+                    <div>
+                        <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="p-2 bd-highlight linkCustom" title="Instagram" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="{{ route('public_home') }}">
+                        <img class="img-fluid logoHome" alt="logo" src="/images/logo06.png"></img>
+                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span><i class="fas fa-bars fa-2x"></i></span>
                 </button>
@@ -78,10 +82,7 @@
                         <a class="{{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
                         <a class="{{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-end mobileSocial">
-                        <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="p-2 bd-highlight linkCustom" title="Instagram" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
+                    
                 </div>
             </div>
         </nav>
@@ -94,7 +95,7 @@
             <div class="container-fluid footer-info Iamarock">
                 <div class="row">
                     <div class="col-4 footer-left">
-                        <p class="mt-4"><span class="Rockit">Le Rock'n'Burger</span><br>12 rue du Port Vieux <br> 64200 Biarritz <br>+33 6 64 64 64 64</p>
+                        <p class="mt-4"><span class="Rockit">Le Rock'n Burger</span><br>12 rue du Port Vieux <br> 64200 Biarritz <br>+33 6 64 64 64 64</p>
                     </div>
                     <div class="col-4 text-center">
                         <p class="mt-4">Ouvert tous les jours<br>De 12H00 à 22H30<br>Sur place ou à emporter</p>
@@ -109,7 +110,7 @@
                 </div>
             </div>
             <div class="text-center droit">
-                <span>© 2020 - Le Rock'n'Burger - Tous droits réservés | <a class="mentions" href="">Mentions Légales</a></span>
+                <span>© 2020 - Le Rock'n Burger - Tous droits réservés | <a class="mentions" href="">Mentions Légales</a></span>
             </div>
         </div>
     </div>

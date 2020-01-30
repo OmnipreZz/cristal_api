@@ -12,9 +12,6 @@
 <strong>Téléphone </strong> 
 {{ $data['phone'] }}
 
-<strong>Sujet</strong> 
-{{ $data['subject'] }}
-
 <strong>Message</strong> 
 
 {{ $data['message'] }}
