@@ -94,13 +94,13 @@
         <div class="footer container-fluid text-white">
             <div class="container-fluid footer-info Iamarock">
                 <div class="row">
-                    <div class="col-4 footer-left">
+                    <div class="col-xs-12 col-md-4 footer-left">
                         <p class="mt-4"><span class="Rockit">Le Rock'n Burger</span><br>12 rue du Port Vieux <br> 64200 Biarritz <br>+33 6 64 64 64 64</p>
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-xs-12 col-md-4 text-center">
                         <p class="mt-4">Ouvert tous les jours<br>De 12H00 à 22H30<br>Sur place ou à emporter</p>
                     </div>
-                    <div class="col-4 footer-right text-center">
+                    <div class="col-xs-12 col-md-4 footer-right text-center">
                         <p class="mt-4">Rejoignez-nous sur les réseaux sociaux</p>
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="p-2 bd-highlight socialCustom d-flex align-items-center justify-content-center mx-2" title="Facebook" href=""><i class="fab fa-facebook-f fa-2x"></i></a>
