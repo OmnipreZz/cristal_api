@@ -18,6 +18,8 @@ class ContactController extends Controller
         $data = request()->validate([
             'name' => 'required',
             'email' => 'required|email',
+            'phone' => '',
+            'subject' => '',
             'message' => 'required'
         ]);
 
