@@ -14,7 +14,7 @@
 Route::get('/', 'AppController@index');
 
 Route::get('/', 'PublicController@index')->name('public_home');
-Route::get('/evenements', 'PublicController@event')->name('public_event');
+Route::get('/actualites', 'PublicController@event')->name('public_event');
 Route::get('/galerie', 'PublicController@photo')->name('public_photo');
 Route::get('/menu', 'PublicController@menu')->name('public_menu');
 Route::get('/contact', 'ContactController@create')->name('public_contact');

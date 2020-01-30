@@ -53,7 +53,7 @@
                     <ul class="navbar-nav Iamarock">
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
                         <a class="{{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
-                        <a class="{{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
+                        <a class="{{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_event') }}">{{ __('Actualités') }}</a>
                         <a class="{{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
                         <a class="{{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
@@ -78,7 +78,7 @@
                     <ul class="navbar-nav Iamarock mobileLink">
                         <a class="nav-link-custom" href="{{ route('public_home') }}">{{ __('Accueil') }}</a>
                         <a class="{{ 'menu' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_menu') }}">{{ __('Menu') }}</a>
-                        <a class="{{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_event') }}">{{ __('Evénements') }}</a>
+                        <a class="{{ 'evenements' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_event') }}">{{ __('Actualités') }}</a>
                         <a class="{{ 'galerie' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_photo') }}">{{ __('Photos') }}</a>
                         <a class="{{ 'contact' == request()->path() ? "active-link" : "nav-link-custom"}}" href="{{ route('public_contact') }}">{{ __('Contact') }}</a>
                     </ul>
