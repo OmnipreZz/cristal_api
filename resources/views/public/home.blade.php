@@ -5,9 +5,10 @@
 <img src="/images/snack-2635035_1920.jpg" class="img-fluid imageHome" alt="Responsive image">
 <div class="container-fluid accueil text-white">
   <div class="row">
-    <div class="col-7 offset-5 mt-5 pt-sm-0 pt-md-5 text-center">
-    <h1 class="Iamarock textShad">Ouvert tous les jours<br>Sur place ou à empoter</h1>
-    <a type="button" class="btn mt-4 btnMenu" href="{{ route('public_menu') }}">Voir le menu</a>
+    <h1 class="col-xs-12 col-md-10 offset-md-1 Rockit textShad">Le Rock'n <span class="redCustom">Burger</span></h1>
+    <div class="col-7 offset-5 text-center pt-2">
+      <h2 class="Iamarock pt-5 mt-4 textShad">Ouvert tous les jours<br>Sur place ou à empoter</h2>
+      <a type="button" class="btn mt-4 btnMenu" href="{{ route('public_menu') }}">Voir le menu</a>
     </div>
   </div>
 </div>
