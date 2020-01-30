@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="container">
+<div class="container contactThanks">
 		<div class="alert alert-success" role="alert">
-		 	Thanks, we will contact you soon
+		 	Merci pour votre message, nous vous répondrons dans les meilleurs délais
 		</div>
 </div>
 
