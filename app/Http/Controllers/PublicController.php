@@ -17,7 +17,8 @@ class PublicController extends Controller
 
     public function event()
     {
-        return view('public.event');
+        $models = Event::orderBy('event_date', 'desc')->get();
+        return view('public.event', ['events'=>$models]);
     }
 
     public function menu()
@@ -27,6 +28,7 @@ class PublicController extends Controller
 
     public function photo()
     {
-        return view('public.photo');
+        $models = Photo::orderBy('id', 'asc')->get();
+        return view('public.photo', ['photos'=>$models]);
     }
 }
