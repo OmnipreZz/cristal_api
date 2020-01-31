@@ -62,7 +62,7 @@
                           @enderror
                         </div>
                         <div class="form-group">
-                          <label for="event_date">{{ __('Date') }}</label>
+                          <label for="event_date">{{ __('Date du jour de l\'événement') }}</label>
                           <input id="event_date" name="event_date" type="text" class="date form-control @error('event_date') is-invalid @enderror" value="@if($event ?? '') {{ $event->event_date }} @endif" readonly>
                         </div>
                         <div class="form-group">

@@ -40,7 +40,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route('events.index') }}">{{ __('Evénements') }}</a>
-                        <!--<a class="nav-link" href="{{ route('menus.index') }}">{{ __('Menus') }}</a>-->
                         <a class="nav-link" href="{{ route('photos.index') }}">{{ __('Photos') }}</a>
                     </ul>
 
@@ -62,7 +61,7 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
+        <main class="py-5">
             @yield('content')
         </main>
     </div>
