@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Photo;
 use App\Event;
-use App\Menu;
-use App\Menucategory;
+
 
 class PublicController extends Controller
 {
     public function index()
-    {
-        return view('public.home');
+    {   
+        $models = Photo::orderBy('id', 'asc')->take(3)->get();
+        return view('public.home', ['photos'=>$models]);
     }
 
     public function event()
