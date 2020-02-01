@@ -19,11 +19,9 @@
 <div class="test">
 </div>
 
-<!--<div class="test1" id="ancre">
 
-</div>-->
 
-<!--<div class="Redhr"></div>-->
+
 
 <div class="container-fluid homePagePhoto bg-white" id="ancre">
   <div class="row d-flex align-items-center justify-content-center">
@@ -42,6 +40,10 @@
   </div>-->
 </div>
 <div class="homePhotoBack bg-dark">
+
+</div>
+<div class="Redhr"></div>
+<div class="test1 bg-white">
 
 </div>
 
