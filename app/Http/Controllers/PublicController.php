@@ -11,13 +11,13 @@ class PublicController extends Controller
 {
     public function index()
     {   
-        $models = Photo::orderBy('id', 'asc')->take(3)->get();
+        $models = Photo::orderBy('id', 'desc')->take(3)->get();
         return view('public.home', ['photos'=>$models]);
     }
 
     public function event()
     {
-        $models = Event::orderBy('event_date', 'desc')->get();
+        $models = Event::orderBy('id', 'asc')->get();
         return view('public.event', ['events'=>$models]);
     }
 
@@ -28,7 +28,7 @@ class PublicController extends Controller
 
     public function photo()
     {
-        $models = Photo::orderBy('id', 'asc')->get();
+        $models = Photo::orderBy('id', 'desc')->get();
         return view('public.photo', ['photos'=>$models]);
     }
 }

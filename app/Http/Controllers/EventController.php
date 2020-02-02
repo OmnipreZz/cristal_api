@@ -21,7 +21,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $models = Event::orderBy('event_date', 'desc')->get();
+        $models = Event::orderBy('id', 'asc')->get();
         return view('event.index', ['events'=>$models]);
     }
 
