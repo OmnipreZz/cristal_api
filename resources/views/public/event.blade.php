@@ -75,4 +75,8 @@
     @endforeach
 </div>
 
+<div class="photoPagination d-flex align-items-center justify-content-center pagination-lg py-5 bg-white">
+    {{ $events->links() }}
+</div>
+
 @endsection

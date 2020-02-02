@@ -17,7 +17,7 @@ class PublicController extends Controller
 
     public function event()
     {
-        $models = Event::orderBy('id', 'asc')->get();
+        $models = Event::orderBy('id', 'asc')->paginate(5);
         return view('public.event', ['events'=>$models]);
     }
 
@@ -28,7 +28,9 @@ class PublicController extends Controller
 
     public function photo()
     {
-        $models = Photo::orderBy('id', 'desc')->get();
-        return view('public.photo', ['photos'=>$models]);
+        $photos = Photo::orderBy('id', 'desc')->paginate(20);
+        $padphotos = Photo::orderBy('id', 'desc')->paginate(15);
+        $mobilephotos = Photo::orderBy('id', 'desc')->paginate(5);
+        return view('public.photo', compact('photos', 'padphotos', 'mobilephotos'));
     }
 }
