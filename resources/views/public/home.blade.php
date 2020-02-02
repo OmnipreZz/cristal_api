@@ -20,10 +20,13 @@
 </div>
 
 
+<div class="Redhr"></div>
+<div class="test1 bg-white" id="ancre">
+
+</div>
 
 
-
-<div class="container-fluid homePagePhoto bg-white" id="ancre">
+<div class="container-fluid homePagePhoto bg-white" >
   <div class="row d-flex align-items-center justify-content-center">
     <div class="col-4 bg01"></div>
     <div class="col-4 bg02"></div>
@@ -39,13 +42,8 @@
     <a type="button" class="btnPhoto d-flex align-items-center justify-content-center" title="Galerie Photo" href="{{ route('public_photo') }}">VOIR LES PHOTOS</a>
   </div>-->
 </div>
-<div class="homePhotoBack bg-dark">
+<div class="homePhotoBack bg-dark"></div>
 
-</div>
-<div class="Redhr"></div>
-<div class="test1 bg-white">
-
-</div>
 
 <div class="Redhr"></div>
 <div class="mapPoint text-white text-center">
