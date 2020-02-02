@@ -13,11 +13,11 @@
           <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-fluid">
         </div>
         <div class="col-6 p-5 text-center">
-          <div class="Iamarock pb-5 pt-3">
+          <div class="Iamarock pb-2">
             <h2>{{ $event->title }}</h2>
           </div>
-          <div>*</div>
-          <div class="pt-5">
+          <div><i class="fas fa-hamburger"></i></div>
+          <div class="pt-3 text-dark">
             <p>{{ $event->description }}</p>
           </div>
         </div>
@@ -26,11 +26,11 @@
       <div class="row">
         <div class="Eventhr"></div>
         <div class="col-6 p-5 text-center">
-          <div class="Iamarock pb-5 pt-3">
+          <div class="Iamarock pb-2">
             <h2>{{ $event->title }}</h2>
           </div>
-          <div>*</div>
-          <div class="pt-5">
+          <div><i class="fas fa-hamburger"></i></div>
+          <div class="pt-3 text-dark">
             <p>{{ $event->description }}</p>
           </div>
         </div>
@@ -53,7 +53,8 @@
           <div class="Iamarock">
             <h2>{{ $event->title }}</h2>
           </div>
-          <div class="">
+          <div><i class="fas fa-hamburger"></i></div>
+          <div class="pt-2">
             <p>{{ $event->description }}</p>
           </div>
         </div>
