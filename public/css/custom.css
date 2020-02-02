@@ -370,6 +370,16 @@ body {
   display: none;
 }
 
+.t1 {
+  min-height: 92%;
+}
+
+.dateArticle {
+  font-size: 0.8em;
+  font-style: italic;
+  color: grey;
+}
+
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////Menu//////////////////////////////// */

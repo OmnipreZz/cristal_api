@@ -13,12 +13,17 @@
           <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-fluid">
         </div>
         <div class="col-6 p-5 text-center">
-          <div class="Iamarock pb-2">
-            <h2>{{ $event->title }}</h2>
+          <div class="t1">
+            <div class="Iamarock pb-2">
+              <h2>{{ $event->title }}</h2>
+            </div>
+            <div><i class="fas fa-hamburger"></i></div>
+            <div class="pt-3 text-dark">
+              <p>{{ $event->description }}</p>
+            </div>
           </div>
-          <div><i class="fas fa-hamburger"></i></div>
-          <div class="pt-3 text-dark">
-            <p>{{ $event->description }}</p>
+          <div class="text-right dateArticle">
+            <p>Le {{ date('d/m/Y', strtotime($event->created_at)) }}</p>
           </div>
         </div>
       </div>
@@ -26,12 +31,17 @@
       <div class="row">
         <div class="Eventhr"></div>
         <div class="col-6 p-5 text-center">
-          <div class="Iamarock pb-2">
-            <h2>{{ $event->title }}</h2>
-          </div>
-          <div><i class="fas fa-hamburger"></i></div>
-          <div class="pt-3 text-dark">
-            <p>{{ $event->description }}</p>
+          <div class="t1">
+            <div class="Iamarock pb-2">
+              <h2>{{ $event->title }}</h2>
+            </div>
+            <div><i class="fas fa-hamburger"></i></div>
+            <div class="pt-3 text-dark">
+              <p>{{ $event->description }}</p>
+            </div>
+          </div> 
+          <div class="text-right dateArticle">
+            <p>Le {{ date('d/m/Y', strtotime($event->created_at)) }}</p>
           </div>
         </div>
         <div class="col-6 p-5">
@@ -56,6 +66,9 @@
           <div><i class="fas fa-hamburger"></i></div>
           <div class="pt-2">
             <p>{{ $event->description }}</p>
+          </div>
+          <div class="text-right dateArticle">
+            <p>Le {{ date('d/m/Y', strtotime($event->created_at)) }}</p>
           </div>
         </div>
       </div>
