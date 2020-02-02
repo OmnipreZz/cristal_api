@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container-fluid bg-white py-5 desktopArticle">
+    <h1 class="text-center Iamarock mb-4 redCustom">Les Actualités</h1>
     @php $no = 1 @endphp
     @foreach($events as $event)
     @php $no++ @endphp

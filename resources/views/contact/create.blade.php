@@ -6,7 +6,7 @@
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-8">
     <div class="row">
     <div class="col-12 text-center">
-      <p class="contactTitle textShad Iamarock text-white">Contactez-nous !</p>
+      <h2 class="textShad Iamarock text-white">Contactez-nous !</h2>
     </div>
     <div class="contactForm  shadow-sm col-sm-12 col-md-6 p-3">
       <form action="/contact" method="POST">

@@ -225,6 +225,7 @@ body {
 
 .mobileActive {
   display: none;
+
 }
 
 .navbar-toggler {
@@ -242,7 +243,7 @@ body {
   width: 100%;
   max-height: 90vh;
   margin-top: 5vh;
-  z-index: 30;
+  z-index: 1;
 }
 
 .imageHome {
@@ -477,10 +478,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  .contactTitle {
-    font-size: 1.5em;
   }
 
   .contactForm {

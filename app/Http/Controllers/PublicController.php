@@ -17,7 +17,7 @@ class PublicController extends Controller
 
     public function event()
     {
-        $models = Event::orderBy('id', 'asc')->paginate(5);
+        $models = Event::orderBy('created_at', 'desc')->paginate(5);
         return view('public.event', ['events'=>$models]);
     }
 

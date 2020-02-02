@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container-fluid bg-white py-5">
-  <h1 class="text-center">PHOTOS</h1>
+  <h1 class="text-center Iamarock redCustom">Galerie Photo</h1>
 
   <div class="galeriePic galleryDesktop row py-4">
   @foreach($photos as $photo)
