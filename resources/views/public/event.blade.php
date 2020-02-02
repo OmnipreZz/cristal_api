@@ -2,14 +2,55 @@
 
 @section('content')
 
-<div class="container-fluid bg-white py-5">
+<div class="container-fluid bg-white py-5 desktopArticle">
+    @php $no = 1 @endphp
     @foreach($events as $event)
+    @php $no++ @endphp
+    @if ($no%2) 
       <div class="row">
+        <div class="Eventhr"></div>
         <div class="col-6 p-5">
           <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-fluid">
         </div>
+        <div class="col-6 p-5 text-center">
+          <div class="Iamarock pb-5 pt-3">
+            <h2>{{ $event->title }}</h2>
+          </div>
+          <div>*</div>
+          <div class="pt-5">
+            <p>{{ $event->description }}</p>
+          </div>
+        </div>
+      </div>
+    @else
+      <div class="row">
+        <div class="Eventhr"></div>
+        <div class="col-6 p-5 text-center">
+          <div class="Iamarock pb-5 pt-3">
+            <h2>{{ $event->title }}</h2>
+          </div>
+          <div>*</div>
+          <div class="pt-5">
+            <p>{{ $event->description }}</p>
+          </div>
+        </div>
         <div class="col-6 p-5">
-          <div class="text-center Iamarock">
+          <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-fluid">
+        </div>
+      </div>
+    @endif
+    @endforeach
+</div>
+
+<div class="container-fluid bg-white py-5 mobileArticle">
+    @foreach($events as $event)
+      <div class="row">
+      <div class="Eventhr"></div>
+        <div class="col-12 pt-5 pb-2">
+          <img src="{{ asset('storage/' . $event->cover) }}" alt="" class="img-fluid">
+        </div>
+        <div class="col-12 pb-5 text-center">
+          <div class="Iamarock">
             <h2>{{ $event->title }}</h2>
           </div>
           <div class="">

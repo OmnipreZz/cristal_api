@@ -34,6 +34,13 @@ body {
   width: 100%;
 }
 
+.Eventhr {
+  background-color: #e30714;
+  height: 1px;
+  width: 100%;
+}
+
+
 .mapPoint {
   height: 8vh;
   width: 100%;
@@ -353,6 +360,18 @@ body {
 
 /* /////////////////// */
 /* ///////// */
+/* ////////////////////////////////EVENT//////////////////////////////// */
+
+.desktopArticle {
+  padding: 10%;
+}
+
+.mobileArticle {
+  display: none;
+}
+
+/* /////////////////// */
+/* ///////// */
 /* ////////////////////////////////Menu//////////////////////////////// */
 
 .menuPage {
@@ -517,6 +536,10 @@ body {
     padding: 0;
   }
 
+  .desktopArticle {
+    padding: 5%;
+  }
+
   .byCristal {
     font-size: 0.5em;
   }
@@ -597,6 +620,19 @@ body {
 @media (max-width: 575.98px) {
   .byCristal {
     font-size: 0.5em;
+  }
+
+  .desktopArticle {
+    display: none;
+  }
+  
+  .mobileArticle {
+    display: block;
+  }
+
+  .Eventhr {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
