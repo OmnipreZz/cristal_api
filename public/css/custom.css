@@ -195,7 +195,7 @@ body {
 /* ////////////////////////////////NAVBAR//////////////////////////////// */
 
 .header {
-  border-bottom: 2px solid #e30714;
+  border-bottom: 1px solid #e30714;
   height: 14vh;
   display: flex;
   align-items: center;
@@ -262,11 +262,11 @@ body {
 
 .arrowScroll {
   display: none;
-  color: white;
+  color: #e30714;
 }
 
 .arrowScroll:hover {
-  color: #e30714;
+  color: white;
   text-decoration: none;
 }
 

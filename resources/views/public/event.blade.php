@@ -18,9 +18,9 @@
             <div class="Iamarock pb-2">
               <h2>{{ $event->title }}</h2>
             </div>
-            <div><i class="fas fa-hamburger"></i></div>
+            <div><i class="fas fa-hamburger redCustom"></i></div>
             <div class="pt-3 text-dark">
-              <p>{{ $event->description }}</p>
+              {{ $event->description }}
             </div>
           </div>
           <div class="text-right dateArticle">
@@ -36,9 +36,9 @@
             <div class="Iamarock pb-2">
               <h2>{{ $event->title }}</h2>
             </div>
-            <div><i class="fas fa-hamburger"></i></div>
+            <div><i class="fas fa-hamburger redCustom"></i></div>
             <div class="pt-3 text-dark">
-              <p>{{ $event->description }}</p>
+              {{ $event->description }}
             </div>
           </div> 
           <div class="text-right dateArticle">
@@ -64,9 +64,9 @@
           <div class="Iamarock">
             <h2>{{ $event->title }}</h2>
           </div>
-          <div><i class="fas fa-hamburger"></i></div>
+          <div><i class="fas fa-hamburger redCustom"></i></div>
           <div class="pt-2">
-            <p>{{ $event->description }}</p>
+            {{ $event->description }}
           </div>
           <div class="text-right dateArticle">
             <p>Le {{ date('d/m/Y', strtotime($event->created_at)) }}</p>

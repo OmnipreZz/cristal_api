@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/388a6f036a.js" crossorigin="anonymous"></script>
+    <script src="//cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -65,5 +66,8 @@
             @yield('content')
         </main>
     </div>
+    <script>
+        CKEDITOR.replace( 'description' );
+    </script>
 </body>
 </html>
