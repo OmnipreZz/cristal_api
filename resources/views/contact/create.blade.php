@@ -52,7 +52,7 @@
     </div>
     <div class="contactInfo bg-white text-center shadow-sm col-sm-12 col-md-6 p-3">
       <p class="contactPhoneMess Iamarock">Pour toutes réservations sur place ou commandes à emporter contactez-nous uniquement par téléphone</p>
-      <p class="contactPhone p-3">+33 6 64 64 64 64</p>
+      <p class="contactPhone p-3">+33 5 40 39 58 12</p>
     
         <hr class='bg-dark'>
         </hr>

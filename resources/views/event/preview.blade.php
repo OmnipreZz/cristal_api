@@ -23,7 +23,7 @@
                   <p>{{ $event->description }}</p>
                 </div>
                 <div class="card-footer text-right">
-                  <p>Prévu le {{ date('d-m-Y', strtotime($event->event_date)) }}</p>
+                  <p>Le {{ date('d-m-Y', strtotime($event->created_at)) }}</p>
                 </div>
             </div>
         </div>

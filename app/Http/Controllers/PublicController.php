@@ -33,4 +33,9 @@ class PublicController extends Controller
         $mobilephotos = Photo::orderBy('id', 'desc')->paginate(5);
         return view('public.photo', compact('photos', 'padphotos', 'mobilephotos'));
     }
+
+    public function mention()
+    {
+        return view('public.mention');
+    }
 }

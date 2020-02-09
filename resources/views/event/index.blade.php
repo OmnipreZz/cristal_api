@@ -25,7 +25,7 @@
                     <tbody>
                       @foreach($events as $event)
                       <tr>
-                        <td>{{ date('d-m-Y', strtotime($event->event_date)) }}</td>
+                        <td>{{ date('d-m-Y', strtotime($event->created_at)) }}</td>
                         <td>{{ $event->title }}</td>
                         <td class="text-right">
                           <a class="btn btn-info btn-sm" title="Voir l'événement"  href="{{ route('events.show', $event) }}">{{ __('Voir') }}</a>

@@ -38,7 +38,7 @@
             </div>
             <div><i class="fas fa-hamburger redCustom"></i></div>
             <div class="pt-3 text-dark">
-              {{ $event->description }}
+            {{ $event->description }}
             </div>
           </div> 
           <div class="text-right dateArticle">

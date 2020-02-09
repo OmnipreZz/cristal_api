@@ -45,7 +45,6 @@ class EventController extends Controller
     {
         Validator::make($request->all(), [
             'title' => 'required|max:255',
-            'event_date' => 'required',
             'cover' => 'required|image'
         ])->validate();
 
@@ -95,11 +94,10 @@ class EventController extends Controller
     {
         Validator::make($request->all(), [
             'title' => 'required|max:255',
-            'event_date' => 'required',
             'cover' => 'required|image'
         ])->validate();
 
-        $update = ['title' => $request->title, 'description' => $request->description, 'event_date' => $request->event_date, 'cover' => request()->cover->store('uploads', 'public')];
+        $update = ['title' => $request->title, 'description' => $request->description, 'cover' => request()->cover->store('uploads', 'public')];
         $model = Event::where('id', $event->id)->update($update);
 
         if($model) {

@@ -42,7 +42,7 @@
                         </a>
                     </div>
                     <div class="col-sm-5 col-md-4 d-flex align-items-center justify-content-end">
-                        <span class="Iamarock pr-3"><i class="fas fa-phone redCustom pr-1"></i> +33 6 64 64 64 64</span>
+                        <span class="Iamarock pr-3"><i class="fas fa-phone redCustom pr-1"></i> +33 5 40 39 58 12</span>
                         <a class="p-2 bd-highlight linkCustom" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="p-2 bd-highlight linkCustom" title="Instagram" href=""><i class="fab fa-instagram"></i></a>
                     </div>
@@ -97,10 +97,10 @@
             <div class="container-fluid footer-info Iamarock">
                 <div class="row">
                     <div class="col-xs-12 col-md-4 footer-left">
-                        <p class="mt-4"><span class="Rockit">Le Rock'n Burger</span><br>12 rue du Port Vieux <br> 64200 Biarritz <br>+33 6 64 64 64 64</p>
+                        <p class="mt-4"><span class="Rockit">Le Rock'n Burger</span><br>12 rue du Port Vieux <br> 64200 Biarritz <br>+33 5 40 39 58 12</p>
                     </div>
                     <div class="col-xs-12 col-md-4 text-center">
-                        <p class="mt-4">Ouvert tous les jours<br>De 12H00 à 22H30<br>Sur place ou à emporter</p>
+                        <p class="mt-4">Ouvert tous les jours<br>Sur place ou à emporter<br><span class="horaire">Lun à Ven 12H - 15H / 19H - 22H<br>Sam - Dim 12H - 23H</span></p>
                     </div>
                     <div class="col-xs-12 col-md-4 footer-right text-center">
                         <p class="mt-4">Rejoignez-nous sur les réseaux sociaux</p>
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div class="text-center droit">
-                <span>© 2020 - Le Rock'n Burger - Tous droits réservés | <a class="mentions" href="">Mentions Légales</a></span>
+                <span>© 2020 - Le Rock'n Burger - Tous droits réservés | <a class="mentions" href="{{ route('public_mention') }}">Mentions Légales</a></span>
             </div>
         </div>
     </div>

@@ -430,10 +430,6 @@ body {
 /* ///////// */
 /* ////////////////////////////////PHOTOS//////////////////////////////// */
 
-.photoPage {
-  background-image: url('/images/guitar-2635044_1280.jpg');
-}
-
 .galeriePic {
   padding: 15vh;
 }
@@ -446,7 +442,6 @@ body {
 .picT {
   height: 98%;
   width: 98%;
-  /* border-radius: 25px; */
 }
 
 .picT:hover {
@@ -565,6 +560,11 @@ body {
 .mentions {
   text-decoration: underline;
   color: white;
+}
+
+.horaire {
+  font-size: 0.7em;
+  font-style: italic;
 }
 
 

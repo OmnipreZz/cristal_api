@@ -62,10 +62,6 @@
                           @enderror
                         </div>
                         <div class="form-group">
-                          <label for="event_date">{{ __('Date du jour de l\'événement') }}</label>
-                          <input id="event_date" name="event_date" type="text" class="date form-control @error('event_date') is-invalid @enderror" value="@if($event ?? '') {{ $event->event_date }} @endif" readonly>
-                        </div>
-                        <div class="form-group">
                           @if ($event ?? '')
                           @method('PUT')
                           <button class="btn btn-warning" title="Modifier l'événement" formaction="{{ route('events.update', $event) }}" type="submit">{{ __('Modifier') }}</button>
