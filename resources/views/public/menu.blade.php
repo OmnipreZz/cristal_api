@@ -3,13 +3,10 @@
 @section('content')
 
 <div class="text-center pt-5 pb-5 bg-white">
-<h1 class="text-center Iamarock mb-4 redCustom">Le Menu</h1>
-  <img src="/images/rocknburger_menu_01.jpg" class="img-fluid menuImage mb-5 carteMenu" alt="">
-  <img src="/images/rocknburger_menu_02.jpg" class="img-fluid menuImage mb-5 carteMenu" alt="">
-  <img src="/images/rocknburger_desserts_01.jpg" class="img-fluid menuImage mb-5 carteMenu" alt="">
-<h2 class="text-center Iamarock mb-4 redCustom">A Emporter</h2>
-  <img src="/images/rocknburger_panneau_01.jpg" class="img-fluid menuImage mb-5 carteMenu" alt="">
-  <img src="/images/rocknburger_panneau_02.jpg" class="img-fluid menuImage carteMenu" alt="">
+  <h1 class="text-center Iamarock mb-4 redCustom">Le Menu</h1>
+@foreach($menuphotos as $menuphoto)
+  <img src="{{ asset('storage/' . $menuphoto->picture) }}" class="img-fluid menuImage mb-5 carteMenu" alt="">
+@endforeach
 </div>
 
 @endsection

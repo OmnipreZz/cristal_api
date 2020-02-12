@@ -9,7 +9,7 @@
   @foreach($photos as $photo)
     <div class="col-3 d-flex align-items-center justify-content-center">
       <a class="btn my-2 btnPic d-flex align-items-center justify-content-center" title="Voir la photo"  href="{{ route('photos.show', $photo) }}" data-toggle="modal" data-target="#selectDesktop{{$photo->id}}">
-        <img src="{{ asset('storage/' . $photo->picture) }}" alt="Image galerie photo" class="picT">
+        <img src="{{ asset('storage/' . $photo->picture) }}" alt="Image galerie photo" class="picT img-thumbnail">
       </a>
       <div class="modal fade" id="selectDesktop{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="Photo du Rock'n Burger" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">

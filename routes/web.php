@@ -36,5 +36,6 @@ Route::resource('events', 'EventController');
 Route::resource('menus', 'MenuController');
 Route::resource('menucategories', 'MenucategoryController');
 Route::resource('photos', 'PhotoController');
+Route::resource('menuphotos', 'MenuphotoController');
 
 Route::Post('/admin/menus/bycategory','MenuController@indexByCat')->name('menu_indexcategory')->middleware('auth');

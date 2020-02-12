@@ -368,7 +368,7 @@ body {
 .bg01 {
   height: 60vh;
   width: 100%;
-  background-image: url('/images/snack-2635035_1920.jpg');
+  background-image: url('/images/IMG_20200208_091035.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -377,7 +377,7 @@ body {
 .bg02 {
   height: 60vh;
   width: 100%;
-  background-image: url('/images/vintage-791942_1280.jpg');
+  background-image: url('/images/IMG_20200209_163745.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -434,7 +434,7 @@ body {
   padding: 15vh;
 }
 
-.btnPic {
+/**.btnPic {
   height: 200px;
   width: 300px;
 }
@@ -450,7 +450,7 @@ body {
   -webkit-box-shadow: 4px 6px 31px -3px rgba(0,0,0,0.75);
   -moz-box-shadow: 4px 6px 31px -3px rgba(0,0,0,0.75);
   box-shadow: 4px 6px 31px -3px rgba(0,0,0,0.75);
-}
+}*/
 
 .photoPagination {
   width: 100%;

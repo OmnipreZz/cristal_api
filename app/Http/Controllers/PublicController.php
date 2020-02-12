@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Photo;
 use App\Event;
+use App\Menuphoto;
 
 
 class PublicController extends Controller
@@ -23,7 +24,8 @@ class PublicController extends Controller
 
     public function menu()
     {
-        return view('public.menu');
+        $models = Menuphoto::orderBy('id', 'desc')->get();
+        return view('public.menu', ['menuphotos'=>$models]);
     }
 
     public function photo()

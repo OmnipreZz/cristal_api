@@ -100,7 +100,7 @@
                         <p class="mt-4"><span class="Rockit">Le Rock'n Burger</span><br>12 rue du Port Vieux <br> 64200 Biarritz <br>+33 5 40 39 58 12</p>
                     </div>
                     <div class="col-xs-12 col-md-4 text-center">
-                        <p class="mt-4">Ouvert tous les jours<br>Sur place ou à emporter<br><span class="horaire">Lun à Ven 12H - 15H / 19H - 22H<br>Sam - Dim 12H - 23H</span></p>
+                        <p class="mt-4">Ouvert tous les jours<br>Sur place ou à emporter<!--<br><span class="horaire">Lun à Ven 12H - 15H / 19H - 22H<br>Sam - Dim 12H - 23H</span>--></p>
                     </div>
                     <div class="col-xs-12 col-md-4 footer-right text-center">
                         <p class="mt-4">Rejoignez-nous sur les réseaux sociaux</p>
